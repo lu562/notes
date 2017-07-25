@@ -1,0 +1,24 @@
+1. cli cannot connect to orderer in dev mode:
+
+Error: Error getting broadcast client: Error connecting to orderer:7050 due to context deadline exceeded
+
+Solution: this will happen if you run hyperledger inside a virtual machine(VMware etc.),the solution is changing network adapter of your virtual machine to Bridged instead of NAT.
+
+2.Another reason for "Failed connecting to orderer0.tec.com:7050 , error: context deadline exceeded"
+
+Solution:https://stackoverflow.com/questions/44775844/error-starting-up-a-network-nodes-in-different-vm-failed-connecting-to-ordere
+
+3.The name "/data-container-name" is already used by container <hash>. You have to remove (or rename) that container to be able to reuse that name.
+
+Solution:https://github.com/moby/moby/issues/23371
+
+4.panic: Error while trying to create dir if missing: mkdir /var/hyperledger: permission denied
+
+solution:
+https://stackoverflow.com/questions/44950124/panic-error-while-trying-to-create-dir-if-missing-mkdir-var-hyperledger-perm?rq=1
+
+5.some materials helping setup v1.0:
+https://domsteil.com/2017/04/22/how-to-setup-hyperledger-fabric-v1-0-on-aws/
+
+6.note: node version 7.10 needed for v1.0 instead of 6.9X
+
